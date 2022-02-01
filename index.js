@@ -10,9 +10,14 @@ app.use(cors());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use("/user", userRoute);
-mongoose.connect(process.env.MONGO_URI).then(() => {
-  console.log("Connected to database");
-});
+mongoose
+  .connect(process.env.MONGO_URI)
+  .then(() => {
+    console.log("Connected to database");
+  })
+  .catch((err) => {
+    console.log("connection to database fail " + err.message);
+  });
 const port = process.env.PORT || 4000;
 
 app.listen(port, () => {
