@@ -16,6 +16,23 @@ const submitData = async (req, res) => {
     });
   }
 };
+const deleteData = async (req, res) => {
+  const { id } = req.params;
+  try {
+    const deleted = await User.findByIdAndDelete(id);
+
+    res.status(200).json({
+      success: true,
+      message: "Data deleted successfully",
+      data: deleted,
+    });
+  } catch (err) {
+    res.status(500).json({
+      success: false,
+      message: err.message,
+    });
+  }
+};
 
 const getData = async (req, res) => {
   try {
@@ -36,4 +53,5 @@ const getData = async (req, res) => {
 module.exports = {
   submitData,
   getData,
+  deleteData,
 };
