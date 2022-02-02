@@ -19,7 +19,7 @@ const submitData = async (req, res) => {
 
 const getData = async (req, res) => {
   try {
-    const data = await User.find({});
+    const data = await User.find({}).sort({ _id: -1 });
     res.status(200).json({
       success: true,
       message: "Data saved successfully",
