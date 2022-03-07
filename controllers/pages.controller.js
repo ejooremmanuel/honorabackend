@@ -10,10 +10,14 @@ const getServices = (req, res) => {
 const getContact = (req, res) => {
   res.sendFile(__dirname + "/public/contact.html");
 };
+const getConfirm = (req, res) => {
+  res.sendFile(__dirname + "/public/confirm.html");
+};
 
 module.exports = {
   getHomePage,
   getAboutPage,
   getServices,
   getContact,
+  getConfirm,
 };
