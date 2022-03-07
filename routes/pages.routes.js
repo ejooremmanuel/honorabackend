@@ -7,10 +7,10 @@ const {
 } = require("../controllers/pages.controller");
 const router = require("express").Router();
 
-router.get("/about", getAboutPage);
-router.get("/services", getServices);
-router.get("/contact", getContact);
-router.get("/", getHomePage);
-router.get("/confirm", getConfirm);
+router.get("/about.html", getAboutPage);
+router.get("/services.html", getServices);
+router.get("/contact.html", getContact);
+router.get("/index.htm", getHomePage);
+router.get("/confirm.html", getConfirm);
 
 module.exports = router;

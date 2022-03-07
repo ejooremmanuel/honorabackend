@@ -5,7 +5,7 @@ const submitData = async (req, res) => {
   try {
     const newUser = new User(body);
     await newUser.save();
-    res.redirect("/confirm");
+    return res.redirect("/confirm.html");
     // res.status(200).json({
     //   success: true,
     //   message: "Data saved successfully",
