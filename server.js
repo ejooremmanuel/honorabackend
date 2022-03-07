@@ -2,14 +2,45 @@ const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
 const dotenv = require("dotenv").config();
+const app = express();
+const helmet = require("helmet");
+const xss = require("xss-clean");
+const morgan = require("morgan");
+const rateLimit = require("express-rate-limit");
+const http = require("http").createServer(app);
+const io = require("socket.io")(http, {
+  cors: {
+    origin: "*",
+  },
+});
 
 const userRoute = require("./routes/routes");
+const pagesRoute = require("./routes/pages.routes");
 
-const app = express();
 app.use(cors());
+//set security headers
+app.use(
+  helmet({
+    contentSecurityPolicy: false,
+  })
+);
+
+// Prevent XSS attacks
+app.use(xss());
+
+//Rate limiting
+// const limiter = rateLimit({
+//   windowMs: 10 * 60 * 1000, // 10 mins
+//   max: 100,
+// });
+// app.use(limiter);
+app.use(morgan("dev"));
+app.use(express.static("public"));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use("/user", userRoute);
+app.use("/", pagesRoute);
+
 mongoose
   .connect(process.env.MONGO_URI)
   .then(() => {
@@ -19,11 +50,15 @@ mongoose
     console.log("connection to database fail " + err.message);
   });
 
-app.get("/", (req, res) => {
-  res.send("Hello World");
+io.on("connection", (socket) => {
+  console.log("a user connected");
+  socket.on("message", ({ user, message }) => {
+    io.emit("message", { user, message });
+  });
 });
-const port = process.env.PORT || 4000;
 
-app.listen(port, () => {
+const port = process.env.PORT || 4001;
+
+http.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });

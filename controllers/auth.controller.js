@@ -5,10 +5,11 @@ const submitData = async (req, res) => {
   try {
     const newUser = new User(body);
     await newUser.save();
-    res.status(200).json({
-      success: true,
-      message: "Data saved successfully",
-    });
+    res.sendFile(__dirname + "/public/confirm.html");
+    // res.status(200).json({
+    //   success: true,
+    //   message: "Data saved successfully",
+    // });
   } catch (err) {
     res.status(500).json({
       success: false,
