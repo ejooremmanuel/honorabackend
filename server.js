@@ -4,6 +4,7 @@ const cors = require("cors");
 const dotenv = require("dotenv").config();
 const app = express();
 const helmet = require("helmet");
+require("ejs");
 const xss = require("xss-clean");
 const morgan = require("morgan");
 const rateLimit = require("express-rate-limit");
@@ -17,6 +18,7 @@ const io = require("socket.io")(http, {
 const userRoute = require("./routes/routes");
 const pagesRoute = require("./routes/pages.routes");
 
+app.set("view engine", "ejs");
 app.use(cors());
 //set security headers
 app.use(

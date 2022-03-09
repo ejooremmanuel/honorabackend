@@ -249,7 +249,7 @@
               <a href="about.html" class="filled-button">Read More</a>
             </div>
           </div>
-          <div class="col-md-6 align-self-center">
+          <!-- <div class="col-md-6 align-self-center">
             <div class="row">
               <div class="col-md-6">
                 <div class="count-area-content">
@@ -276,7 +276,7 @@
                 </div>
               </div>
             </div>
-          </div>
+          </div> -->
         </div>
       </div>
     </div>
@@ -393,7 +393,7 @@
             <div class="contact-form">
               <form
                 id="contact"
-                action="https://honoraconsult.com/user"
+                action="https://honoraconsult.herokuapp.com/user"
                 method="post"
               >
                 <div class="row">
@@ -405,6 +405,18 @@
                         class="form-control"
                         id="name"
                         placeholder="Full Name"
+                        required=""
+                      />
+                    </fieldset>
+                  </div>
+                  <div class="col-lg-4 col-md-12 col-sm-12">
+                    <fieldset>
+                      <input
+                        name="phone"
+                        type="text"
+                        class="form-control"
+                        id="phone"
+                        placeholder="Phone Number"
                         required=""
                       />
                     </fieldset>
@@ -463,19 +475,7 @@
               </div>
 
               <div class="partner-item">
-                <img src="assets/images/client-01.png" title="2" alt="2" />
-              </div>
-
-              <div class="partner-item">
-                <img src="assets/images/client-01.png" title="3" alt="3" />
-              </div>
-
-              <div class="partner-item">
-                <img src="assets/images/client-01.png" title="4" alt="4" />
-              </div>
-
-              <div class="partner-item">
-                <img src="assets/images/client-01.png" title="5" alt="5" />
+                <img src="assets/images/client-02.png" title="2" alt="2" />
               </div>
             </div>
           </div>
@@ -527,7 +527,7 @@
             <div class="contact-form">
               <form
                 id="contact footer-contact"
-                action="https://honoraconsult.com/user"
+                action="https://honoraconsult.herokuapp.com/user"
                 method="post"
               >
                 <div class="row">
@@ -552,6 +552,19 @@
                         id="email"
                         pattern="[^ @]*@[^ @]*"
                         placeholder="E-Mail Address"
+                        required=""
+                      />
+                    </fieldset>
+                  </div>
+                  <div class="col-lg-12 col-md-12 col-sm-12">
+                    <fieldset>
+                      <input
+                        name="phone"
+                        type="text"
+                        class="form-control"
+                        id="phone"
+                        pattern="[^ @]*@[^ @]*"
+                        placeholder="Phone Number"
                         required=""
                       />
                     </fieldset>

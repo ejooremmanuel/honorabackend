@@ -11,7 +11,7 @@ const userSchema = new Schema(
     message: {
       type: String,
     },
-    company: {
+    phone: {
       type: String,
     },
   },
