@@ -26,7 +26,7 @@ const submitData = async (req, res) => {
 
     await sendEmail(options);
 
-    return res.redirect("/confirm.html");
+    return res.redirect("https://www.honoraconsult.com/confirm.html");
     // res.status(200).json({
     //   success: true,
     //   message: "Data saved successfully",
