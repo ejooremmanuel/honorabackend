@@ -1288,6 +1288,21 @@ footer .contact-form button.filled-button:hover {
   align-items: center;
 }
 
+/* Messages */
+.table {
+  width: 100%;
+  margin-bottom: 20px;
+  margin-top: 40px;
+  border-collapse: collapse;
+  border-spacing: 0;
+  display: table;
+  table-layout: fixed;
+  border-top: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+}
+
 /* Responsive Style */
 @media (max-width: 768px) {
   .sub-header {

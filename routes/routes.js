@@ -10,6 +10,6 @@ const router = require("express").Router();
 router.post("/", submitData);
 router.post("/chat", chatMe);
 router.get("/", getData);
-router.delete("/:id", deleteData);
+router.delete("/delete/:id", deleteData);
 
 module.exports = router;

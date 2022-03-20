@@ -42,10 +42,18 @@ const deleteData = async (req, res) => {
   try {
     const deleted = await User.findByIdAndDelete(id);
 
-    res.status(200).json({
+    if (!deleted) {
+      return res.redirect("/");
+    }
+
+    const resDelete = (await User.find()).filter(
+      (item) => item.id !== deleted.id
+    );
+
+    return res.status(201).json({
       success: true,
       message: "Data deleted successfully",
-      data: deleted,
+      data: resDelete,
     });
   } catch (err) {
     res.status(500).json({
