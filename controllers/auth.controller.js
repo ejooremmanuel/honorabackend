@@ -44,7 +44,7 @@ const deleteData = async (req, res) => {
     const deleted = await User.findByIdAndDelete(id);
 
     if (!deleted) {
-      return res.redirect("/");
+      return res.redirect("https://www.honoraconsult.com/");
     }
 
     const resDelete = (await User.find()).filter(
