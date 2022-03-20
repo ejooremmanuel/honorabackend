@@ -1,6 +1,7 @@
 const sendEmail = require("../config/mail");
 const User = require("../models/User");
 const { renderTemplate } = require("../utils/template");
+const path = require("path");
 
 const submitData = async (req, res) => {
   const { body } = req;
