@@ -55,18 +55,32 @@
                   ><i class="fa fa-phone"></i>+2348024780213</a
                 >
               </li>
+              <li>
+                <a href="tel:+2349057029961"
+                  ><i class="fa fa-phone"></i>+2349057029961</a
+                >
+              </li>
             </ul>
           </div>
           <div class="col-md-4">
             <ul class="right-icons">
               <li>
-                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="https://facebook.com/honoraconsult"
+                  ><i class="fa fa-facebook"></i
+                ></a>
               </li>
               <li>
-                <a href="#"><i class="fa fa-instagram"></i></a>
+                <a href="https://www.instagram.com/honoraconsult/"
+                  ><i class="fa fa-instagram"></i
+                ></a>
               </li>
               <li>
                 <a href="#"><i class="fa fa-linkedin"></i></a>
+              </li>
+              <li>
+                <a href="https://wa.me/+2349057029961"
+                  ><i class="fa fa-whatsapp"></i
+                ></a>
               </li>
             </ul>
           </div>
@@ -92,16 +106,15 @@
           <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
               <li class="nav-item">
-                <a class="nav-link" href="index.html"
-                  >Home
-                  <span class="sr-only">(current)</span>
-                </a>
+                <a class="nav-link" href="index.html">Home </a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="about.html">About Us</a>
               </li>
               <li class="nav-item active">
-                <a class="nav-link" href="services.html">Our Services</a>
+                <a class="nav-link" href="services.html"
+                  >Our Services <span class="sr-only">(current)</span></a
+                >
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="contact.html">Contact Us</a>
@@ -118,7 +131,7 @@
         <div class="row">
           <div class="col-md-12">
             <h1>Our Services</h1>
-            <span>We are over 20 years of experience</span>
+            <span>We are over 20 years in experience</span>
           </div>
         </div>
       </div>
@@ -162,6 +175,23 @@
                   >Tax Management <i class="fa fa-angle-right"></i
                 ></a>
               </li>
+              <li>
+                <a href="#tabs-7"
+                  >Business Plan, Projections and Research
+                  <i class="fa fa-angle-right"></i
+                ></a>
+              </li>
+              <li>
+                <a href="#tabs-8"
+                  >Business Registration and Incorporation
+                  <i class="fa fa-angle-right"></i
+                ></a>
+              </li>
+              <li>
+                <a href="#tabs-9"
+                  >Hiring and Training <i class="fa fa-angle-right"></i
+                ></a>
+              </li>
             </ul>
           </div>
           <div class="col-md-8">
@@ -199,13 +229,23 @@
                   We also lease out assets, motorbikes and vehicles for
                   logistics and delivery services.
                 </p>
+                <div style="display: grid; grid-template-columns: 1fr 1fr">
+                  <img src="assets/images/asset_1.jpg" alt="" />
+                  <img src="assets/images/asset_2.png" alt="" />
+                  <img src="assets/images/asset_3.png" alt="" />
+                </div>
+                <p>
+                  Do you need a motor bike, car or any type of vehicle to run
+                  logistics service, bolt or uber? At Honora we will help
+                  provide you with all you need. Give us a call right now.
+                </p>
               </article>
               <article id="tabs-5">
                 <img src="assets/images/single_service_04.jpg" alt="" />
                 <h4>Financial Systems and Controls</h4>
                 <p>
                   We provide business process and structures that would deliver
-                  increased your business efficiency and productivity
+                  increase your business efficiency and productivity.
                 </p>
               </article>
               <article id="tabs-6">
@@ -215,6 +255,32 @@
                   We proffer advisory services in tax planning and finance
                   management to ensure compliance to the legal tax requirement
                   of the Government
+                </p>
+              </article>
+              <article id="tabs-7">
+                <img src="assets/images/single_service_04.jpg" alt="" />
+                <h4>Business Plan, Projections and Research</h4>
+                <p>
+                  We help with your business plan, financial projections and
+                  research for start up, expansion plans and business revamp.
+                </p>
+              </article>
+              <article id="tabs-8">
+                <img src="assets/images/single_service_04.jpg" alt="" />
+                <h4>Business Registration and Incorporation</h4>
+                <p>
+                  We handle your business registration and incorporation
+                  processes with professionalism along with advisory. We also
+                  help with all filings due to CAC. We are registered agents
+                  with CAC.
+                </p>
+              </article>
+              <article id="tabs-9">
+                <img src="assets/images/single_service_04.jpg" alt="" />
+                <h4>Hiring and Training</h4>
+                <p>
+                  We hire suitable accountants and finance staff that would add
+                  value to your organization.
                 </p>
               </article>
             </section>
@@ -336,7 +402,9 @@
                 ></a>
               </li>
               <li>
-                <a href="#"><i class="fa fa-instagram"></i></a>
+                <a href="https://instagram.com/honoraconsult" target="_blank"
+                  ><i class="fa fa-instagram"></i
+                ></a>
               </li>
               <li>
                 <a href="#"><i class="fa fa-linkedin"></i></a>
@@ -402,7 +470,6 @@
                         type="text"
                         class="form-control"
                         id="phone"
-                        pattern="[^ @]*@[^ @]*"
                         placeholder="Phone Number"
                         required=""
                       />
@@ -470,6 +537,23 @@
           t.style.color = "#fff";
         }
       }
+
+      $(".owl-carousel").owlCarousel({
+        loop: true,
+        margin: 10,
+        nav: true,
+        responsive: {
+          0: {
+            items: 1,
+          },
+          600: {
+            items: 3,
+          },
+          1000: {
+            items: 5,
+          },
+        },
+      });
     </script>
   </body>
 </html>

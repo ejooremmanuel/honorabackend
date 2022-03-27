@@ -1,13 +1,13 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
-const dotenv = require("dotenv").config();
+require("dotenv").config();
 const app = express();
 const helmet = require("helmet");
 require("ejs");
 const xss = require("xss-clean");
 const morgan = require("morgan");
-const rateLimit = require("express-rate-limit");
+// const rateLimit = require("express-rate-limit");
 const http = require("http").createServer(app);
 const io = require("socket.io")(http, {
   cors: {
@@ -29,13 +29,6 @@ app.use(
 
 // Prevent XSS attacks
 app.use(xss());
-
-//Rate limiting
-// const limiter = rateLimit({
-//   windowMs: 10 * 60 * 1000, // 10 mins
-//   max: 100,
-// });
-// app.use(limiter);
 app.use(morgan("dev"));
 app.use(express.static("public"));
 app.use(express.urlencoded({ extended: true }));
