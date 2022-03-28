@@ -383,23 +383,23 @@ header .navbar {
   height: 95vh;
 }
 
-.Modern-Slider .item-1 .img-fill {
+/* .Modern-Slider .item-1 .img-fill {
   background-image: linear-gradient(
       to bottom,
       rgba(32, 33, 36, 0.616),
       rgba(11, 11, 12, 0.281)
     ),
     url(../images/slide_04.jpg);
-}
-.Modern-Slider .item-2 .img-fill {
+} */
+.Modern-Slider .item-1 .img-fill {
   background-image: url(../images/slide_01.jpg);
 }
 
-.Modern-Slider .item-3 .img-fill {
+.Modern-Slider .item-2 .img-fill {
   background-image: url(../images/slide_02.jpg);
 }
 
-.Modern-Slider .item-4 .img-fill {
+.Modern-Slider .item-3 .img-fill {
   background-image: url(../images/slide_03.jpg);
 }
 
