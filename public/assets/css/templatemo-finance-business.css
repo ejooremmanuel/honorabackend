@@ -1303,6 +1303,27 @@ footer .contact-form button.filled-button:hover {
   border-right: 1px solid #ccc;
 }
 
+.whatsapp__btn {
+  background-color: #25d366;
+  color: #fff;
+  /* padding: 10px 20px; */
+  border-radius: 50%;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  border: none;
+  cursor: pointer;
+  position: fixed;
+  top: 88%;
+  left: 92%;
+}
+.whatsapp__btn a {
+  font-size: 60px !important;
+  color: inherit;
+}
+
 /* Responsive Style */
 @media (max-width: 768px) {
   .sub-header {
@@ -1371,6 +1392,9 @@ footer .contact-form button.filled-button:hover {
   .contact-item {
     margin-bottom: 30px;
   }
+  .container__confirm {
+    width: 70vw;
+  }
 }
 
 @media (max-width: 992px) {
@@ -1412,5 +1436,9 @@ footer .contact-form button.filled-button:hover {
   .navbar .navbar-nav .show > .nav-link {
     color: rgb(76, 129, 228) !important;
     border-bottom: none !important;
+  }
+
+  .container__confirm {
+    width: 70vw;
   }
 }
