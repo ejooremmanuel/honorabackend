@@ -1325,7 +1325,7 @@ footer .contact-form button.filled-button:hover {
   cursor: pointer;
   position: fixed;
   top: 88%;
-  left: 92%;
+  left: 90%;
 }
 .whatsapp__btn a {
   font-size: 60px !important;
@@ -1402,6 +1402,9 @@ footer .contact-form button.filled-button:hover {
   }
   .container__confirm {
     width: 70vw;
+  }
+  .whatsapp__btn {
+    left: 80%;
   }
 }
 
